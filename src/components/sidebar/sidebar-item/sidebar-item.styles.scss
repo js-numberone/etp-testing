@@ -1,0 +1,17 @@
+.item{
+    color:black;
+    border-radius: 15px;
+    width: 60%;
+    cursor:pointer;
+    :hover{
+        background-color: #EAF0FF;
+        border-radius: 5px;
+    }
+
+    p{
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+    }
+}

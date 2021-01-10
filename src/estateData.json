@@ -1,0 +1,86 @@
+{
+    "estate1":{
+    "bankAccounts":{
+        "01":{
+            "description": "Guelph",
+            "name": "TD BANK"
+        },
+        "02":{
+            "description": "Guelph",
+            "name": "TD BANK"
+        }
+    },
+    "beneficiaries":{
+        "01":{
+            "disbursments":{
+                "01":{
+                    "description": "moms cookie jar",
+                    "type": "cash",
+                    "value": 10000
+                }
+            },
+        "firstName": "Peter",
+        "lastName": "Parker"
+        }
+    },
+    "certAppt": "H34434jofd",
+    "decased":{
+        "dateofDeath": "Jan 10",
+        "firstName": "Debbie",
+        "lastName": "Stanley",
+        "middleName": "Martins"
+    },
+    "estateName": "Estate of Debbie Martins Stanley",
+    "executorInfo":{
+        "firstName": "John",
+        "lastName": "Stanley"
+    },
+    "isLocked": false,
+    "originalValue": 2000000,
+    "outstandingDuties":[1,0,1],
+    "oustandingLiability":500000,
+    "realizedValue": 100000
+    },
+    "estate2":{
+        "bankAccounts":{
+            "01":{
+                "description": "Guelph",
+                "name": "TD BANK"
+            },
+            "02":{
+                "description": "Guelph",
+                "name": "TD BANK"
+            }
+        },
+        "beneficiaries":{
+            "01":{
+                "disbursments":{
+                    "01":{
+                        "description": "moms cookie jar",
+                        "type": "cash",
+                        "value": 10000
+                    }
+                },
+            "firstName": "Peter",
+            "lastName": "Parker"
+            }
+        },
+        "certAppt": "H34434jofd",
+        "decased":{
+            "dateofDeath": "Jan 10",
+            "firstName": "Debbie",
+            "lastName": "Stanley",
+            "middleName": "Martins"
+        },
+        "estateName": "Estate of Debbie Martins Stanley",
+        "executorInfo":{
+            "firstName": "John",
+            "lastName": "Stanley"
+        },
+        "isLocked": false,
+        "originalValue": 2000000,
+        "outstandingDuties":[1,0,1],
+        "oustandingLiability":500000,
+        "realizedValue": 100000
+    }
+}
