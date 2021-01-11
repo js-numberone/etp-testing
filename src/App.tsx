@@ -1,6 +1,5 @@
-import React from 'react';
 import './App.css';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 
 import Header from './components/header/header.component';
 import SideBar from './components/sidebar/sidebar.component';
@@ -21,7 +20,7 @@ function App() {
       <div className='stacked-components'>
         <Header/>
         <Switch>
-          <Route exact path='/summary' component={SummaryPage}/>
+          <Route exact path='/' component={SummaryPage}/>
           <Route exact path='/checklist' component={Checklist}/>
           <Route exact path='/gen-docs' component={GenDocs}/>
           <Route exact path='/originals' component={Originals}/>

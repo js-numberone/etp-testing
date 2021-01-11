@@ -1,5 +1,3 @@
-import React from 'react';
-
 import UserBox from './user-box/user-box.component'
 import ValuesBox from './values-box/values-box.component';
 

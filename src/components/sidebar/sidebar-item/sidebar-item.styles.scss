@@ -1,17 +1,42 @@
 .item{
     color:black;
     border-radius: 15px;
-    width: 60%;
+    width: 70%;
     cursor:pointer;
     :hover{
         background-color: #EAF0FF;
         border-radius: 5px;
+    }
+    
+
+    .faIcon{
+        padding: 0px 10px 0px;
+       color: #E5E5E5;
     }
 
     p{
         text-decoration: none;
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 5px;
+    }
+}
+.selected{
+    color:black;
+    border-radius: 15px;
+    width: 70%;
+    background-color: #EAF0FF;
+    border-radius: 5px;
+
+    
+
+    .faIcon{
+        padding: 0px 10px 0px;
+       color: #263B90;
+    }
+
+    p{
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
