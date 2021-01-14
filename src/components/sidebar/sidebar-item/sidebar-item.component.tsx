@@ -1,15 +1,16 @@
-import { IconName } from '@fortawesome/fontawesome-svg-core';
+import { useState, FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 import '../sidebar-item/sidebar-item.styles.scss';
 
-import { useState } from 'react';
-
-const SidebarItem = () => {
-	const [activeMenu, setActiveMenu] = useState('');
+interface props {
+	menuIsOpen: boolean;
+}
+const SidebarItem: FC<props> = ({ menuIsOpen }) => {
+	const [activeMenu, setActiveMenu] = useState('home');
 	return (
-		<div>
+		<div className={`${menuIsOpen ? 'open' : 'closed'}`}>
 			<h2>Dashboard</h2>
 			<Link
 				to='/'
@@ -18,14 +19,20 @@ const SidebarItem = () => {
 					setActiveMenu('home');
 				}}
 			>
-				<div className={`${activeMenu === 'home' ? 'selected' : 'item'}`}>
+				<div
+					className={`${activeMenu === 'home' ? 'selected' : 'item'} ${
+						menuIsOpen ? 'open' : 'closed'
+					}`}
+				>
 					<span className='bar' />
 					<p>
-						<FontAwesomeIcon
-							className='faIcon'
-							icon={['fas', 'home']}
-							size='lg'
-						/>
+						<div className='icon-box'>
+							<FontAwesomeIcon
+								className='faIcon'
+								icon={['fas', 'home']}
+								size='lg'
+							/>
+						</div>
 						Summary
 					</p>
 				</div>
@@ -37,14 +44,20 @@ const SidebarItem = () => {
 					setActiveMenu('check');
 				}}
 			>
-				<div className={`${activeMenu === 'check' ? 'selected' : 'item'}`}>
+				<div
+					className={`${activeMenu === 'check' ? 'selected' : 'item'} ${
+						menuIsOpen ? 'open' : 'closed'
+					}`}
+				>
 					<span className='bar' />
 					<p>
-						<FontAwesomeIcon
-							className='faIcon'
-							icon={['fas', 'tasks']}
-							size='lg'
-						/>
+						<div className='icon-box'>
+							<FontAwesomeIcon
+								className='faIcon'
+								icon={['fas', 'tasks']}
+								size='lg'
+							/>
+						</div>
 						Ckecklist
 					</p>
 				</div>
@@ -56,14 +69,20 @@ const SidebarItem = () => {
 					setActiveMenu('original');
 				}}
 			>
-				<div className={`${activeMenu === 'original' ? 'selected' : 'item'}`}>
+				<div
+					className={`${activeMenu === 'original' ? 'selected' : 'item'} ${
+						menuIsOpen ? 'open' : 'closed'
+					}`}
+				>
 					<span className='bar' />
 					<p>
-						<FontAwesomeIcon
-							className='faIcon'
-							icon={['fas', 'balance-scale']}
-							size='lg'
-						/>
+						<div className='icon-box'>
+							<FontAwesomeIcon
+								className='faIcon'
+								icon={['fas', 'balance-scale']}
+								size='lg'
+							/>
+						</div>
 						Originals
 					</p>
 				</div>
@@ -76,14 +95,20 @@ const SidebarItem = () => {
 					setActiveMenu('receipt');
 				}}
 			>
-				<div className={`${activeMenu === 'receipt' ? 'selected' : 'item'}`}>
+				<div
+					className={`${activeMenu === 'receipt' ? 'selected' : 'item'} ${
+						menuIsOpen ? 'open' : 'closed'
+					}`}
+				>
 					<span className='bar' />
 					<p>
-						<FontAwesomeIcon
-							className='faIcon'
-							icon={['fas', 'receipt']}
-							size='lg'
-						/>
+						<div className='icon-box'>
+							<FontAwesomeIcon
+								className='faIcon'
+								icon={['fas', 'receipt']}
+								size='lg'
+							/>
+						</div>
 						Receipts
 					</p>
 				</div>
@@ -96,15 +121,19 @@ const SidebarItem = () => {
 				}}
 			>
 				<div
-					className={`${activeMenu === 'disbursment' ? 'selected' : 'item'}`}
+					className={`${activeMenu === 'disbursment' ? 'selected' : 'item'} ${
+						menuIsOpen ? 'open' : 'closed'
+					}`}
 				>
 					<span className='bar' />
 					<p>
-						<FontAwesomeIcon
-							className='faIcon'
-							icon={['fas', 'hand-holding-usd']}
-							size='lg'
-						/>
+						<div className='icon-box'>
+							<FontAwesomeIcon
+								className='faIcon'
+								icon={['fas', 'hand-holding-usd']}
+								size='lg'
+							/>
+						</div>
 						Disbursment
 					</p>
 				</div>
@@ -116,14 +145,20 @@ const SidebarItem = () => {
 					setActiveMenu('gen');
 				}}
 			>
-				<div className={`${activeMenu === 'gen' ? 'selected' : 'item'}`}>
+				<div
+					className={`${activeMenu === 'gen' ? 'selected' : 'item'} ${
+						menuIsOpen ? 'open' : 'closed'
+					}`}
+				>
 					<span className='bar' />
 					<p>
-						<FontAwesomeIcon
-							className='faIcon'
-							icon={['fas', 'file-alt']}
-							size='lg'
-						/>
+						<div className='icon-box'>
+							<FontAwesomeIcon
+								className='faIcon'
+								icon={['fas', 'file-alt']}
+								size='lg'
+							/>
+						</div>
 						Documents
 					</p>
 				</div>

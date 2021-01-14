@@ -1,11 +1,23 @@
 .header {
-	padding: 5px;
-	margin: 5px 5px 5px 10px;
-	display: flex;
+	padding: 10px;
 	width: 100%;
-	justify-content: flex-end;
-	border: 1px solid #e0e0e0;
-	box-sizing: border-box;
-	border-radius: 15px;
-	justify-content: space-around;
+	border-bottom: 1px solid #e0e0e0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.header-logo {
+		width: 90px;
+		height: 45px;
+		display: flex;
+		margin-left: calc(20% * 0.15);
+	}
+
+	:nth-child(2) {
+		width: auto;
+		background-color: #ccc;
+	}
+	:nth-child(3) {
+		background-color: #ccc;
+	}
 }

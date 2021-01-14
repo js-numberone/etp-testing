@@ -9,21 +9,35 @@
 	}
 
 	.faIcon {
-		padding: 0px 10px 0px;
 		color: #e5e5e5;
-	}
-
-	p {
-		text-decoration: none;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		transition: padding-left 200ms ease-in-out;
 	}
 
 	.bar {
 		width: 0px;
 	}
 }
+Link {
+	display: flex;
+	flex-direction: row;
+}
+h2 {
+	padding-right: 10px;
+}
+
+p {
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: padding-left 200ms ease-in-out;
+}
+
+.icon-box {
+	display: flex;
+	justify-content: center;
+	width: 50px;
+	float: left;
+}
+
 .selected {
 	color: black;
 	border-radius: 15px;
@@ -32,16 +46,7 @@
 	border-radius: 5px;
 
 	.faIcon {
-		padding: 0px 10px 0px;
 		color: #263b90;
-	}
-
-	p {
-		text-decoration: none;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-		transition: padding-left 200ms ease-in-out;
 	}
 
 	.bar {
@@ -52,5 +57,16 @@
 		display: block;
 		position: absolute;
 		transition: width 200ms ease-in-out;
+	}
+}
+
+div {
+	&.closed {
+		.icon-box {
+			float: right;
+		}
+		h2 {
+			opacity: 0%;
+		}
 	}
 }
