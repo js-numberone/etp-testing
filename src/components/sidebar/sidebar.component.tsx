@@ -6,29 +6,19 @@ import useViewport from '../../hooks/use-viewport';
 
 const SideBar = () => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(true);
-	const [screenSize, setScreenSize] = useState<string>('');
 	const { width } = useViewport();
-	//const breakpoint: number = 1700;
+	const breakpoint: number = 900;
 
 	useEffect(() => {
-		// if (width > 1200) {
-		// 	setScreenSize('lg');
-		// } else if (width < 1650 && width > 1380) {
-		// 	setScreenSize('md');
-		// } else
-		if (width <= 1100) {
-			setScreenSize('sm');
+		if (width <= breakpoint) {
+			setMenuOpen(false);
 		} else {
-			setScreenSize('');
+			setMenuOpen(true);
 		}
 	}, [width]);
 
 	return (
-		<nav
-			className={`sidebar-container ${
-				menuOpen ? 'open' : 'closed'
-			} ${screenSize}`}
-		>
+		<nav className={`sidebar-container ${menuOpen ? 'open' : 'closed'}`}>
 			<button
 				className='toggle-button'
 				onClick={() => {

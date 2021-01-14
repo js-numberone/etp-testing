@@ -10,7 +10,7 @@ interface props {
 const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 	const [activeMenu, setActiveMenu] = useState('home');
 	return (
-		<div className={`${menuIsOpen ? 'open' : 'closed'}`}>
+		<div className={`top-level ${menuIsOpen ? 'open' : 'closed'}`}>
 			<h2>Dashboard</h2>
 			<Link
 				to='/'
@@ -25,7 +25,7 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 					}`}
 				>
 					<span className='bar' />
-					<p>
+					<div className='icon-title-container'>
 						<div className='icon-box'>
 							<FontAwesomeIcon
 								className='faIcon'
@@ -33,8 +33,8 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 								size='lg'
 							/>
 						</div>
-						Summary
-					</p>
+						<p>Summary</p>
+					</div>
 				</div>
 			</Link>
 			<Link
@@ -50,7 +50,7 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 					}`}
 				>
 					<span className='bar' />
-					<p>
+					<div className='icon-title-container'>
 						<div className='icon-box'>
 							<FontAwesomeIcon
 								className='faIcon'
@@ -58,8 +58,8 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 								size='lg'
 							/>
 						</div>
-						Ckecklist
-					</p>
+						<p>Ckecklist</p>
+					</div>
 				</div>
 			</Link>
 			<Link
@@ -75,7 +75,7 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 					}`}
 				>
 					<span className='bar' />
-					<p>
+					<div className='icon-title-container'>
 						<div className='icon-box'>
 							<FontAwesomeIcon
 								className='faIcon'
@@ -83,11 +83,11 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 								size='lg'
 							/>
 						</div>
-						Originals
-					</p>
+						<p>Originals</p>
+					</div>
 				</div>
 			</Link>
-			<h2>Estate Administration</h2>
+			<h2 className='second-header'>Estate Administration</h2>
 			<Link
 				to='/checklist'
 				style={{ textDecoration: 'none' }}
@@ -101,7 +101,7 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 					}`}
 				>
 					<span className='bar' />
-					<p>
+					<div className='icon-title-container'>
 						<div className='icon-box'>
 							<FontAwesomeIcon
 								className='faIcon'
@@ -109,8 +109,8 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 								size='lg'
 							/>
 						</div>
-						Receipts
-					</p>
+						<p>Receipts</p>
+					</div>
 				</div>
 			</Link>
 			<Link
@@ -126,7 +126,7 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 					}`}
 				>
 					<span className='bar' />
-					<p>
+					<div className='icon-title-container'>
 						<div className='icon-box'>
 							<FontAwesomeIcon
 								className='faIcon'
@@ -134,8 +134,8 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 								size='lg'
 							/>
 						</div>
-						Disbursment
-					</p>
+						<p>Disbursment</p>
+					</div>
 				</div>
 			</Link>
 			<Link
@@ -151,7 +151,7 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 					}`}
 				>
 					<span className='bar' />
-					<p>
+					<div className='icon-title-container'>
 						<div className='icon-box'>
 							<FontAwesomeIcon
 								className='faIcon'
@@ -159,8 +159,8 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 								size='lg'
 							/>
 						</div>
-						Documents
-					</p>
+						<p>Documents</p>
+					</div>
 				</div>
 			</Link>
 		</div>

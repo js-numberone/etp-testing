@@ -1,29 +1,19 @@
 .sidebar-container {
-	width: 20%;
-	//max-width: 350px;
-	min-width: 220px;
-	height: calc(100vh - 91px);
+	height: calc(100vh - 94px);
 	border-right: 1px solid #e0e0e0;
-	// &.sm {
-	// 	width: 220px;
-	// }
-	// &.lg {
-	// 	width: 350px;
-	// }
 
 	.toggle-button {
 		position: relative;
 		float: right;
 		top: 20px;
 		right: -20px;
-		z-index: 1;
 		width: 40px;
 		height: 40px;
 		border-radius: 50px;
 		border: 1px solid #ccc;
 		outline: none;
 		background-color: #fff;
-		transition-duration: 200ms;
+		transition: opacity 200ms ease-in-out;
 		opacity: 0%;
 
 		.chevron {
@@ -33,15 +23,14 @@
 			border-width: 0 3px 3px 0;
 			display: inline-block;
 			padding: 3px;
+			margin: 15;
 
 			&.left {
 				transform: rotate(135deg);
-				transition: transform 200ms ease-in-out;
 			}
 
 			&.right {
 				transform: rotate(-45deg);
-				transition: transform 200ms ease-in-out;
 			}
 		}
 
@@ -60,34 +49,34 @@
 
 	.sidebar-menu-items {
 		opacity: 100%;
-		padding-left: 15%;
+		padding-left: 30px;
 		text-align: left;
+		transition: padding-left 1000ms ease-in-out;
 	}
 
 	&:hover {
 		.toggle-button {
 			opacity: 100%;
-			transition: opacity 200ms ease-in-out;
 		}
 	}
 
 	&.open {
-		transition: left 200ms ease-in-out;
+		//min-width: 220px;
+		width: 298px;
+		transition: width 1000ms ease-in-out;
 	}
 
 	&.closed {
 		.toggle-button {
 			opacity: 100%;
-			transition: opacity 200ms ease-in-out;
 		}
-		&.sm {
-			left: -170px;
+
+		.sidebar-menu-items {
+			padding-left: 0;
+			transition: padding-left 1000ms ease-in-out;
 		}
-		// &.lg {
-		// 	left: -250px;
-		// }
-		position: absolute;
-		left: -16%;
-		transition: left 200ms ease-in-out;
+		margin-right: 0px;
+		width: 55px;
+		transition: width 1000ms ease-in-out;
 	}
 }
