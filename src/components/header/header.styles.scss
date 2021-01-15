@@ -1,23 +1,26 @@
 .header {
-	padding: 10px;
 	width: 100%;
 	border-bottom: 1px solid #e0e0e0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 
 	.header-logo {
 		width: 90px;
 		height: 45px;
 		display: flex;
-		margin-left: 149 - 45px;
+		margin-left: 2.5%;
 	}
 
-	:nth-child(2) {
-		width: auto;
-		background-color: #ccc;
-	}
-	:nth-child(3) {
-		background-color: #ccc;
+	.data-box-container {
+		display: flex;
+		flex-direction: row;
+		margin-right: 10px;
+		justify-content: space-between;
+		.box {
+			width: fit-content;
+			margin-left: 20px;
+		}
 	}
 }

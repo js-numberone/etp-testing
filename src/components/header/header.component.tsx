@@ -11,8 +11,12 @@ const Header = () => {
 	return (
 		<header className='header'>
 			<img className='header-logo' src={logo} alt='Logo' />
-			{width > breakpoint ? <ValuesBox /> : ''}
-			<UserBox />
+			<div className='data-box-container'>
+				<div className='box'>{width > breakpoint ? <ValuesBox /> : ''}</div>
+				<div className='box'>
+					<UserBox />
+				</div>
+			</div>
 		</header>
 	);
 };
