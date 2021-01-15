@@ -1,43 +1,40 @@
-import { useState, FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
-
-import '../sidebar-item/sidebar-item.styles.scss';
+import { useState, FC } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../sidebar-item/sidebar-item.styles.scss";
+import { IconName } from "@fortawesome/fontawesome-svg-core";
 
 interface props {
-	menuIsOpen: boolean;
+  menuIsOpen: boolean;
+  iconName: IconName;
+  itemTitle: string;
+  isSelected: boolean;
 }
-const SidebarItem: FC<props> = ({ menuIsOpen }) => {
-	const [activeMenu, setActiveMenu] = useState('home');
-	return (
-		<div className={`top-level ${menuIsOpen ? 'open' : 'closed'}`}>
-			<h2>Dashboard</h2>
-			<Link
-				to='/'
-				style={{ textDecoration: 'none' }}
-				onClick={() => {
-					setActiveMenu('home');
-				}}
-			>
-				<div
-					className={`${activeMenu === 'home' ? 'selected' : 'item'} ${
-						menuIsOpen ? 'open' : 'closed'
-					}`}
-				>
-					<span className='bar' />
-					<div className='icon-title-container'>
-						<div className='icon-box'>
-							<FontAwesomeIcon
-								className='faIcon'
-								icon={['fas', 'home']}
-								size='lg'
-							/>
-						</div>
-						<p>Summary</p>
-					</div>
-				</div>
-			</Link>
-			<Link
+const SidebarItem: FC<props> = ({
+  menuIsOpen,
+  iconName,
+  itemTitle,
+  isSelected,
+}) => {
+  return (
+    <div className={`${menuIsOpen ? "open" : "closed"}`}>
+      <div
+        className={`${isSelected ? "selected" : "item"} ${
+          menuIsOpen ? "open" : "closed"
+        }`}
+      >
+        <span className="bar" />
+        <div className="icon-title-container">
+          <div className="icon-box">
+            <FontAwesomeIcon
+              className="faIcon"
+              icon={["fas", iconName]}
+              size="lg"
+            />
+          </div>
+          <p>{itemTitle}</p>
+        </div>
+      </div>
+      {/* <Link
 				to='/checklist'
 				style={{ textDecoration: 'none' }}
 				onClick={() => {
@@ -162,9 +159,9 @@ const SidebarItem: FC<props> = ({ menuIsOpen }) => {
 						<p>Documents</p>
 					</div>
 				</div>
-			</Link>
-		</div>
-	);
+			</Link> */}
+    </div>
+  );
 };
 
 export default SidebarItem;
