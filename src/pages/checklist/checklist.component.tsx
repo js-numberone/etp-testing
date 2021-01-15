@@ -1,9 +1,11 @@
+import './checklist.styles.scss';
+
 const Checklist = () => {
-    return(
-    <div>
-        <p>Checklist Page</p>
-    </div>
-    )
+	return (
+		<div className='checklist'>
+			<div className='box'></div>
+		</div>
+	);
 };
 
 export default Checklist;

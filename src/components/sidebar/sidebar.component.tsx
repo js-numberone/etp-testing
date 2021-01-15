@@ -1,20 +1,37 @@
-import SidebarItem from './sidebar-item/sidebar-item.component'
+import { useState, useEffect } from 'react';
+import SidebarItem from './sidebar-item/sidebar-item.component';
+
 import './sidebar.styles.scss';
-import logo from '../../assets/salmonLogo.png'
-import { render } from '@testing-library/react';
+import useViewport from '../../hooks/use-viewport';
 
+const SideBar = (): JSX.Element => {
+	const [menuOpen, setMenuOpen] = useState<boolean>(true);
+	const { width } = useViewport();
+	const breakpoint: number = 900;
 
+	useEffect(() => {
+		if (width <= breakpoint) {
+			setMenuOpen(false);
+		} else {
+			setMenuOpen(true);
+		}
+	}, [width]);
 
-const SideBar = () => {
-    return(
-        <div className='sidebar-container'>
-            <img className='sidebar-logo' src={logo} alt="Logo"/>
-            <div className='sidebar-menu-items'>
-            <SidebarItem/>
-            </div>
-        </div>
-    )
-}
+	return (
+		<nav className={`sidebar-container ${menuOpen ? 'open' : 'closed'}`}>
+			<button
+				className='toggle-button'
+				onClick={() => {
+					setMenuOpen(!menuOpen);
+				}}
+			>
+				<span className={`chevron ${menuOpen ? 'left' : 'right'}`} />
+			</button>
+			<div className='sidebar-menu-items'>
+				<SidebarItem menuIsOpen={menuOpen} />
+			</div>
+		</nav>
+	);
+};
 
-
-export default SideBar
+export default SideBar;

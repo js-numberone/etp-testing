@@ -1,42 +1,106 @@
-.item{
-    color:black;
-    border-radius: 15px;
-    width: 70%;
-    cursor:pointer;
-    :hover{
-        background-color: #EAF0FF;
-        border-radius: 5px;
-    }
-    
-
-    .faIcon{
-        padding: 0px 10px 0px;
-       color: #E5E5E5;
-    }
-
-    p{
-        text-decoration: none;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+div {
+	overflow: hidden;
 }
-.selected{
-    color:black;
-    border-radius: 15px;
-    width: 70%;
-    background-color: #EAF0FF;
-    border-radius: 5px;
 
-    
+.item {
+	color: black;
+	border-radius: 5px;
+	width: 95%;
+	cursor: pointer;
+	:hover {
+		background-color: #eaf0ff;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+	.faIcon {
+		color: #e5e5e5;
+	}
 
-    .faIcon{
-        padding: 0px 10px 0px;
-       color: #263B90;
-    }
+	.bar {
+		width: 0px;
+		transition: width 200ms ease-in-out;
+	}
+}
 
-    p{
-        text-decoration: none;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+Link {
+	display: flex;
+	flex-direction: row;
+}
+
+h2 {
+	overflow: visible;
+	z-index: 10;
+	padding-right: 10px;
+	display: block;
+	opacity: 100%;
+	transition: opacity 200ms ease-in-out;
+}
+
+p {
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	opacity: 100%;
+	transition: opacity 200ms ease-in-out;
+}
+
+.icon-box {
+	display: flex;
+	justify-content: center;
+	width: 50px;
+	min-width: 50px;
+	float: left;
+	margin-left: 0px;
+}
+
+.icon-title-container {
+	display: flex;
+	align-items: center;
+	height: 40px;
+}
+
+.selected {
+	color: black;
+	width: 95%;
+	background-color: #eaf0ff;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	.faIcon {
+		color: #263b90;
+	}
+
+	.bar {
+		float: left;
+		width: 5px;
+		height: 40px;
+		background-color: #263b90;
+		display: block;
+		position: relative;
+		transition: width 200ms ease-in-out;
+	}
+}
+
+.closed {
+	h2 {
+		opacity: 0%;
+		transition: opacity 200ms ease-in-out;
+	}
+	p {
+		//display: none;
+		opacity: 0%;
+		transition: opacity 200ms ease-in-out;
+	}
+	// .icon-box {
+	// 	margin-left: 15px;
+	// }
+	.second-header {
+		display: none;
+	}
+	.selected,
+	.item {
+		margin-bottom: 5px;
+		overflow: visible;
+		z-index: 10;
+	}
 }
