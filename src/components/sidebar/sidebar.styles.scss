@@ -3,6 +3,7 @@
 	border-right: 1px solid #e0e0e0;
 
 	.toggle-button {
+		margin-left: -40px;
 		position: relative;
 		float: right;
 		top: 20px;
@@ -51,7 +52,7 @@
 		opacity: 100%;
 		padding-left: 30px;
 		text-align: left;
-		transition: padding-left 1000ms ease-in-out;
+		transition: padding-left 200ms ease-in-out;
 	}
 
 	&:hover {
@@ -63,7 +64,7 @@
 	&.open {
 		//min-width: 220px;
 		width: 298px;
-		transition: width 1000ms ease-in-out;
+		transition: width 200ms ease-in-out;
 	}
 
 	&.closed {
@@ -73,10 +74,10 @@
 
 		.sidebar-menu-items {
 			padding-left: 0;
-			transition: padding-left 1000ms ease-in-out;
+			transition: padding-left 200ms ease-in-out;
 		}
 		margin-right: 0px;
 		width: 55px;
-		transition: width 1000ms ease-in-out;
+		transition: width 200ms ease-in-out;
 	}
 }

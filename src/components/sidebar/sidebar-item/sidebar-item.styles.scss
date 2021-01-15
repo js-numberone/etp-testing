@@ -1,8 +1,5 @@
 div {
 	overflow: hidden;
-
-	&.top-level {
-	}
 }
 
 .item {
@@ -12,7 +9,8 @@ div {
 	cursor: pointer;
 	:hover {
 		background-color: #eaf0ff;
-		border-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
 	}
 	.faIcon {
 		color: #e5e5e5;
@@ -20,19 +18,22 @@ div {
 
 	.bar {
 		width: 0px;
+		transition: width 200ms ease-in-out;
 	}
 }
+
 Link {
 	display: flex;
 	flex-direction: row;
 }
+
 h2 {
 	overflow: visible;
 	z-index: 10;
 	padding-right: 10px;
 	display: block;
 	opacity: 100%;
-	transition: opacity 1000ms ease-in-out;
+	transition: opacity 200ms ease-in-out;
 }
 
 p {
@@ -40,7 +41,7 @@ p {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	opacity: 100%;
-	transition: opacity 1000ms ease-in-out;
+	transition: opacity 200ms ease-in-out;
 }
 
 .icon-box {
@@ -60,9 +61,10 @@ p {
 
 .selected {
 	color: black;
-	border-radius: 5px;
 	width: 95%;
 	background-color: #eaf0ff;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 
 	.faIcon {
 		color: #263b90;
@@ -73,21 +75,21 @@ p {
 		width: 5px;
 		height: 40px;
 		background-color: #263b90;
-		border-radius: 5px;
 		display: block;
 		position: relative;
+		transition: width 200ms ease-in-out;
 	}
 }
 
 .closed {
 	h2 {
 		opacity: 0%;
-		transition: opacity 1000ms ease-in-out;
+		transition: opacity 200ms ease-in-out;
 	}
 	p {
 		//display: none;
 		opacity: 0%;
-		transition: opacity 1000ms ease-in-out;
+		transition: opacity 200ms ease-in-out;
 	}
 	// .icon-box {
 	// 	margin-left: 15px;

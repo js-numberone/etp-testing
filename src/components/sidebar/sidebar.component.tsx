@@ -4,7 +4,7 @@ import SidebarItem from './sidebar-item/sidebar-item.component';
 import './sidebar.styles.scss';
 import useViewport from '../../hooks/use-viewport';
 
-const SideBar = () => {
+const SideBar = (): JSX.Element => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(true);
 	const { width } = useViewport();
 	const breakpoint: number = 900;
